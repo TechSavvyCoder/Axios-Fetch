@@ -51,9 +51,13 @@ The following excerpt shows a portion of the resulting webpage after the user en
 ***In the second part, build a server using Node/Express and use Express to render a website with the API data.***
 
 Complete the following fice tasks:
-1. [2 Marks] Handle a GET request from the client at the root route localhost:3000/. Send back the following HTML file named “_imageGallery2.html_” (not provided by me; you can create this on your own) to the client as the response:
+1. **[2 Marks]** Handle a GET request from the client at the root route localhost:3000/. Send back the following HTML file named “_imageGallery2.html_” (not provided by me; you can create this on your own) to the client as the response:
 
-2. [2 Marks] After the client populates the required form fields (search keyword and the number of images to be displayed), parse the POST request.]
+    ![Part 2a](./assets/Part-2a.png)
+
+2. **[2 Marks]** After the client populates the required form fields (search keyword and the number of images to be displayed), parse the POST request.
+
+    ![Part 2b](./assets/Part-2b.png)
 
     Use the parsed data to structure the URL to fetch the image data from an external server.
 
@@ -61,6 +65,9 @@ Complete the following fice tasks:
 less than 2, then send an appropriate status code back to the client. Otherwise, proceed
 with the next step.
 
-3. [8 Marks] Next, make a GET request to the external Server (at Pixabay API) with the Fetch and Axios (async/await or then functions). You should comment one out, but both modules should work. I will uncomment the code to see if it works fine for both Fetch and Axios. Collect the dynamic image data from the API based on what user typed into the input fields.
+3. **[8 Marks]** Next, make a GET request to the external Server (at Pixabay API) with the Fetch and Axios (async/await or then functions). You should comment one out, but both modules should work. I will uncomment the code to see if it works fine for both Fetch and Axios. Collect the dynamic image data from the API based on what user typed into the input fields.
 
-4. [8 Marks] Create a new template file imageGallery3.ejs or imageGallery3.pug that renders the output as shown in the previous excerpt. Use res.rende (‘imageGallery3.ejs’,{what data you need to pass}) to render this file from your server. You can use EJS or PUG.
+4. **[8 Marks]** Create a new template file imageGallery3.ejs or imageGallery3.pug that renders the output as shown in the previous excerpt. Use res.rende (‘imageGallery3.ejs’,{what data you need to pass}) to render this file from your server. You can use EJS or PUG.
+
+## Contact
+[Contact the developer](https://www.linkedin.com/in/diegopinlac/)
