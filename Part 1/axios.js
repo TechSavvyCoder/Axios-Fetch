@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const apikey = "47273673-549ed5aaf33177036baf753af";
     const form = document.querySelector("form");
     const results = document.querySelector("#results");
 
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         results.innerHTML = "";
         try {
-            const response = await axios.get(`https://pixabay.com/api/?key=${apikey}&q=${input1}&per_page=${input2}&image_type=photo&orientation=horizontal`);
+            const response = await axios.get(`https://pixabay.com/api/?key=${API_KEY}&q=${input1}&per_page=${input2}&image_type=photo&orientation=horizontal`);
             const data = response.data;
 
             if (data.hits && data.hits.length > 0) {
