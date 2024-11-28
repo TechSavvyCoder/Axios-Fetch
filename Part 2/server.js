@@ -21,15 +21,27 @@ app.get("/", (req, res) => {
 app.post("/search", async (req, res) => {
     const { input1, input2 } = req.body;
 
-    if (!input1 || input2 < 2) {
-        return res.status(400).send("Invalid input: Please provide a keyword and at least 2 images.");
+    if (!input1 || input2 <= 2) {
+        return res.status(400).send("<center><h2>Invalid input: Please provide a keyword and at least 2 images.</h2></center>");
     }
 
     try {
         const url = `https://pixabay.com/api/?key=${apikey}&q=${input1}&per_page=${input2}&image_type=photo&orientation=horizontal`;
-        const response = await axios.get(url);
 
-        res.render("imageGallery3", { items: response.data.hits });
+        // =============================== START AXIOS ===============================
+        const axiosResponse = await axios.get(url);
+        const data = axiosResponse.data.hits;
+        // =============================== END AXIOS =================================
+
+
+
+        // =============================== START FETCH ===============================
+        // const fetchResponse = await fetch(url);
+        // const fetchData = await fetchResponse.json();
+        // const data = fetchData.hits;
+        // =============================== END FETCH =================================
+
+        res.render("imageGallery3", { items: data });
     } catch (error) {
         console.error(error);
         res.status(500).send("Failed to fetch images from the Pixabay API.");
